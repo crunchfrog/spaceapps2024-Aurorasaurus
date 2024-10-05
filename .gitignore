@@ -13,3 +13,13 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Mac
+.DS_Store
+._*
+
+# Xcode
+xcuserdata
+/build
+**/DerivedData
+
