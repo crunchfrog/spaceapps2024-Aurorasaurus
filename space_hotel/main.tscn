@@ -1,33 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://capfwk6me71ru"]
+[gd_scene load_steps=3 format=3 uid="uid://capfwk6me71ru"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_5gqee"]
+[ext_resource type="Texture2D" uid="uid://dj723qf1kpggh" path="res://auroracollapse_splash_screen.png" id="2_5wftg"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_5gqee")
 
+[node name="AuroracollapseSplashScreen" type="Sprite2D" parent="."]
+position = Vector2(574, 317)
+scale = Vector2(0.633929, 0.630859)
+texture = ExtResource("2_5wftg")
+
 [node name="PlaySpace" type="Button" parent="."]
-offset_left = 269.0
-offset_top = 160.0
-offset_right = 645.0
-offset_bottom = 238.0
+offset_left = 318.0
+offset_top = 185.0
+offset_right = 546.0
+offset_bottom = 253.0
 text = "Space Hotel"
 
 [node name="PlayEarth" type="Button" parent="."]
 anchors_preset = -1
 anchor_right = 0.653
 anchor_bottom = 1.624
-offset_left = 270.0
-offset_top = 258.0
-offset_right = 645.0
-offset_bottom = 330.0
+offset_left = 565.0
+offset_top = 183.0
+offset_right = 791.0
+offset_bottom = 255.0
 text = "Earth"
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 269.0
-offset_top = 345.0
-offset_right = 647.0
-offset_bottom = 438.0
-text = "Quit"
+offset_left = 437.0
+offset_top = 278.0
+offset_right = 671.0
+offset_bottom = 335.0
+text = "I'm outta here!"
 
 [connection signal="pressed" from="PlaySpace" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="PlayEarth" to="." method="_on_play_earth_pressed"]
