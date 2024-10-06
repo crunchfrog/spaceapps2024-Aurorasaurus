@@ -27,7 +27,7 @@ jobs:
           mkdir -v -p ~/.local/share/godot/export_templates
           mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
       - name: Create staging directory
-        run: mkdir -v -p build/web
+        run: mkdir -v -p docs/game
 
       - name: Build
         run: godot -v --export-release --headless "Web" ../docs/game/index.html space_hotel/project.godot
@@ -35,8 +35,8 @@ jobs:
       - name: Add coi-service-worker
         run: |
           git clone https://github.com/gzuidhof/coi-serviceworker.git
-          mv coi-serviceworker/coi-serviceworker.js build/web/coi-serviceworker.js
-          sed -i '3 i <script src="coi-serviceworker.js"></script>' build/web/index.html
+          mv coi-serviceworker/coi-serviceworker.js docs/game/coi-serviceworker.js
+          sed -i '3 i <script src="coi-serviceworker.js"></script>' docs/game/index.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.9.3
