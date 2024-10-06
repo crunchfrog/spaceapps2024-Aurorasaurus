@@ -4,10 +4,16 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
+
+
 func _unhandled_input(_event: InputEvent) -> void:
-	if (Input.is_anything_pressed()):
-		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "start")
-		return
+	if (Input.is_anything_pressed()) and is_on_floor():
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			# DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "start")
+			return
 		
 
 func _physics_process(delta: float) -> void:

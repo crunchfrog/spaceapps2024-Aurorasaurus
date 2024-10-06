@@ -1,14 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://dr1s2io1ejifs"]
+[gd_scene load_steps=9 format=3 uid="uid://dr1s2io1ejifs"]
 
 [ext_resource type="Texture2D" uid="uid://cj350pkovdpor" path="res://hotel_bed-01.png" id="1_2nkij"]
 [ext_resource type="PackedScene" uid="uid://c5nkygn25861b" path="res://player/player.tscn" id="2_c14oo"]
 [ext_resource type="PackedScene" uid="uid://b1d2vurx1pktv" path="res://mobs/astronaut.tscn" id="3_jw0rh"]
+[ext_resource type="PackedScene" uid="uid://b4m1wey4v8606" path="res://helpers/actionable.tscn" id="4_76sio"]
+[ext_resource type="Resource" uid="uid://bmq2alwf2h5oq" path="res://dialogue/main.dialogue" id="5_ivten"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfqra"]
 size = Vector2(58, 702.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxts2"]
 size = Vector2(1155, 101)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s5wbc"]
+radius = 134.41
 
 [node name="World" type="Node2D"]
 position = Vector2(-36, -42)
@@ -43,5 +48,11 @@ position = Vector2(292, 517)
 
 [node name="Mobs" type="Node2D" parent="."]
 
-[node name="CharacterBody2D" parent="Mobs" instance=ExtResource("3_jw0rh")]
+[node name="Astronaut" parent="Mobs" instance=ExtResource("3_jw0rh")]
 position = Vector2(1032, 510)
+
+[node name="Actionable" parent="Mobs/Astronaut" instance=ExtResource("4_76sio")]
+dialogue_resource = ExtResource("5_ivten")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mobs/Astronaut/Actionable"]
+shape = SubResource("CircleShape2D_s5wbc")

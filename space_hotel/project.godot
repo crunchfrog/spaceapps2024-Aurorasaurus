@@ -27,6 +27,10 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 locale/translations_pot_files=PackedStringArray("res://dialogue/main.dialogue", "res://examples/dialogue_for_visual_novel.dialogue", "res://examples/dialogue_for_point_n_click.dialogue", "res://examples/dialogue_for_csharp.dialogue", "res://examples/dialogue.dialogue", "res://examples/dialogue_with_input.dialogue", "res://dialogue/dialogue_begin.dialogue", "res://dialogue/dialogue_earthside_begin.dialogue")
 
+[layer_names]
+
+2d_physics/layer_5="Actionables"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
