@@ -5,22 +5,23 @@
 [ext_resource type="PackedScene" uid="uid://b1d2vurx1pktv" path="res://mobs/astronaut.tscn" id="3_jw0rh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfqra"]
-size = Vector2(38, 702.5)
+size = Vector2(58, 702.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxts2"]
 size = Vector2(1155, 101)
 
 [node name="World" type="Node2D"]
+position = Vector2(-36, -42)
 
 [node name="HotelBed-01" type="Sprite2D" parent="."]
-position = Vector2(617, 397)
+position = Vector2(613, 396)
 scale = Vector2(1.12695, 0.691406)
 texture = ExtResource("1_2nkij")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(61, 396)
+position = Vector2(51, 396)
 shape = SubResource("RectangleShape2D_pfqra")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
