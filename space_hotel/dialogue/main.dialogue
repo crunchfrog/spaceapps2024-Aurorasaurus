@@ -1,0 +1,11 @@
+~ start
+Nathan: [[Hi|Hello|Howdy]], Bill.
+Nathan: There is a solar flare heading our way.
+- Open the window and watch the Aurora
+	Nathan: You open the window and solar radiation gives you a sunburn.
+- Hide under the blanket.
+	Nathan: You step away from the window and jump under the bed.
+- Start again => start
+- End the conversation => END
+Nathan: For more information see the online documentation.
+=> END
