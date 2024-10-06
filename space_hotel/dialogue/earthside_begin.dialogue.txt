@@ -1,0 +1,21 @@
+~ start
+
+Radio reporter: Good morning. From NPR News in Washington, I’m Steve Inskeep. It’s Friday, May 10th. Today, we’re following a developing story of a series of powerful coronal mass ejections, which are expected to impact Earth later tonight, causing potential disruptions to power grids and communications.
+Radio reporter: Experts are urging precautions as we await the arrival of these geomagnetic storms. "We have high confidence that a series of coronal mass ejections are directed right towards Earth," says Shawn Dahl, service coordinator for the Space Weather Prediction Center told reporters early Friday.
+#do set_background("home-kitchen")
+Judy: Did you hear that, James? A geomagnetic storm tonight!
+- Yeah, sounds serious. We should prepare for power outages and stock up on essentials.
+	Judy: I agree. Let's go to the store to get supplies.
+- I don't know, doesn't sound like anything that serious.
+	Judy: I don't know. Shouldn't we prepare for power outages and stock up on essentials?
+- What did that radio report say? (Start over) => start
+~ grocery_list
+Judy: What should we get at the store?
+- Water => grocery_list
+- Mobile phone Power Pack batteries => grocery_list
+- That's it!
+
+Judy: Ok, let's go!
+- Let's go! => END
+
+=> END

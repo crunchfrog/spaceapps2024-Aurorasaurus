@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://7d67rn6isdpw"
+path="res://.godot/imported/earthside_begin.dialogue-454a4b45800ee4bcdf47c6a81f437321.tres"
+
+[deps]
+
+source_file="res://dialogue/earthside_begin.dialogue"
+dest_files=["res://.godot/imported/earthside_begin.dialogue-454a4b45800ee4bcdf47c6a81f437321.tres"]
+
+[params]
+
+defaults=true
