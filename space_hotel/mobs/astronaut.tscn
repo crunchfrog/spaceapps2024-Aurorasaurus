@@ -1,40 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1d2vurx1pktv"]
+[gd_scene load_steps=5 format=3 uid="uid://b1d2vurx1pktv"]
 
-[ext_resource type="Texture2D" uid="uid://cgko0q47fbn4" path="res://mobs/astronaut spritesheet.jpg" id="1_c37sb"]
-[ext_resource type="Script" path="res://mobs/animated_sprite_2d.gd" id="2_ie8g3"]
+[ext_resource type="Texture2D" uid="uid://bqrnbysiufryy" path="res://mobs/r2d2.png" id="1_gi5e5"]
+[ext_resource type="Script" path="res://mobs/r_2d_2.gd" id="2_upoh6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hf1eg"]
 radius = 24.0
 height = 74.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3itd3"]
-atlas = ExtResource("1_c37sb")
-region = Rect2(408, 682, 204, 341)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kwoce"]
-atlas = ExtResource("1_c37sb")
-region = Rect2(612, 682, 204, 341)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xlsdc"]
-atlas = ExtResource("1_c37sb")
-region = Rect2(816, 682, 204, 341)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_vw80p"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3itd3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kwoce")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xlsdc")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t0e2n"]
 radius = 83.0241
@@ -45,17 +16,14 @@ radius = 83.0241
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_hf1eg")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-3.8147e-06, 1.00001)
-scale = Vector2(0.607843, 0.658358)
-sprite_frames = SubResource("SpriteFrames_vw80p")
-frame_progress = 0.82827
-script = ExtResource("2_ie8g3")
+[node name="R2d2" type="Sprite2D" parent="."]
+position = Vector2(7, -19)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("1_gi5e5")
+script = ExtResource("2_upoh6")
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
 position = Vector2(2, 0)
 shape = SubResource("CircleShape2D_t0e2n")
-
-[connection signal="body_entered" from="PlayerDetection" to="AnimatedSprite2D" method="_on_player_detection_body_entered"]

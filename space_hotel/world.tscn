@@ -13,14 +13,14 @@ size = Vector2(58, 702.5)
 size = Vector2(1155, 101)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s5wbc"]
-radius = 134.41
+radius = 61.131
 
 [node name="World" type="Node2D"]
 position = Vector2(-36, -42)
 
 [node name="HotelBed-01" type="Sprite2D" parent="."]
-position = Vector2(613, 396)
-scale = Vector2(1.12695, 0.691406)
+position = Vector2(595, 330)
+scale = Vector2(1.12402, 1.09961)
 texture = ExtResource("1_2nkij")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -49,10 +49,11 @@ position = Vector2(292, 517)
 [node name="Mobs" type="Node2D" parent="."]
 
 [node name="Astronaut" parent="Mobs" instance=ExtResource("3_jw0rh")]
-position = Vector2(1032, 510)
+position = Vector2(1115, 578)
 
 [node name="Actionable" parent="Mobs/Astronaut" instance=ExtResource("4_76sio")]
 dialogue_resource = ExtResource("5_ivten")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mobs/Astronaut/Actionable"]
+position = Vector2(-16, -3)
 shape = SubResource("CircleShape2D_s5wbc")
