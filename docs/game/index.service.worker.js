@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1728247204|1413332339';
+const CACHE_VERSION = '1728247477|1685984531';
 /** @type {string} */
 const CACHE_PREFIX = 'mySpace-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
